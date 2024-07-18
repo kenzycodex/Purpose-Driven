@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>The Purpose Driven Life</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="">
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="css/jquery.countdown.css" />
+	<!-- Countdown-CSS -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<!-- //css files -->
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Norican&amp;subset=latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Voltaire" rel="stylesheet">
+	<!-- //web-fonts -->
+	 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<style>
+		.event-flyer {
+			width: 100%;
+			max-width: 300px;
+			margin: 20px auto;
+			display: block;
+			border: 5px solid #000; 
+			display: none; 
+		}
+		.form-style-agile {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+		.form-style-agile input[type="text"],
+		.form-style-agile input[type="email"] {
+			flex: 1;
+		}
+		@media (max-width: 768px) {
+			.form-style-agile input[type="submit"] {
+				margin: 0 auto; 
+				padding: 10px 70px;
+			}
+		}
+
+		.button-container {
+			text-align: center;
+			margin: 20px 0;
+		}
+		.button-container button {
+			padding: 10px 25px;
+			margin: 0 10px;
+			border: none;
+			background-color: #ffc107;
+			color: #fff;
+			font-size: 15px;
+			cursor: pointer;
+			letter-spacing: 1px;
+			font-family: "Voltaire", sans-serif;
+		}
+		.button-container button:hover {
+			background-color: #fcc41d;
+		}
+		/* Styles for the image pop-up */
+		.image-popup {
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1000;
+			background-color: #fff;
+			padding: 20px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			text-align: center;
+		}
+		.image-popup img {
+			width: 100%;
+			max-width: 90%;
+			border: 5px solid #000;
+		}
+		.image-popup .close-btn {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			background-color: #ffc107;
+			color: white;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+			padding: 10px;
+		}
+
+		@media (max-width: 768px) {
+			.image-popup img {
+				max-width: 95%;
+				height: auto; 
+			}
+			.image-popup .close-btn {
+				font-size: 12px; 
+				padding: 7px;
+			}
+			.image-popup {
+				width: 90%; 
+				padding: 10px;
+			}
+		}
+
+		/* Overlay */
+		.overlay {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.7);
+			z-index: 999;
+		}
+	</style>
+</head>
+
+<body>
+	<!--header-->
+	<h1>The Purpose Driven Life</h1>
+	<!--//header-->
+	<!-- content -->
+	<div class="main-content-agile">
+		<div class="w3l-agile">
+			<img src="images/1.png" alt="" />
+			<h2>
+				<span>W</span>orship
+				<span>| P</span>raise
+				<span>| W</span>ords
+				<span>| I</span>ntercession
+				<span>| W</span>orkshop Sessions</h2>
+			<img src="images/2.png" alt="" />
+		</div>
+		<!--timer-->
+		<div class="examples">
+			<div class="simply-countdown-losange" id="simply-countdown-losange"></div>
+			<div class="clear"></div>
+		</div>
+		<!--//timer-->
+		<!-- Buttons for view and download -->
+		<div class="button-container">
+			<button id="viewImageBtn">View Flyer</button>
+			<a href="images/purpose.jpg" download="The-Purpose-Driven-Life.jpg"><button>Download Flyer</button></a>
+		</div>
+		<!-- Image Pop-up -->
+		<div class="overlay" id="overlay"></div>
+		<div class="image-popup" id="imagePopup">
+			<button class="close-btn" id="closeBtn">X</button>
+			<img src="images/purpose.jpg" alt="Event Flyer" />
+		</div>
+		<!-- newsletter -->
+		<div class="sub-main-w3">
+			<form action="#" method="post">
+				<p>Don't Miss Out on Our Events! Stay Connected!</p>
+				<div class="form-style-agile">
+					<input placeholder="Name" name="Name" type="text" required="">
+					<input placeholder="Email" name="Email" type="email" required="">
+					<input type="submit" value="Subscribe">
+				</div>
+			</form>
+		</div>
+		<!-- //newsletter -->
+	</div>
+	<!-- //content -->
+	<!-- footer -->
+	<div class="footer">
+		<p>&copy; 2024 The Purpose Driven Life. All rights reserved | Designed by
+			<a href="https://kenzycodex.vercel.app">Kenzy Codex</a>
+		</p>
+	</div>
+	<!-- //footer -->
+
+
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+	<!-- Countdown-Timer-JavaScript -->
+	<script src="js/simplyCountdown.js"></script>
+	<!-- easy to customize -->
+	<script>
+		$('#simply-countdown-losange').simplyCountdown({
+			year: 2024,
+			month: 7,
+			day: 20
+		});
+	</script>
+	<!-- //Countdown-Timer-JavaScript -->
+	<!-- Custom JS for image pop-up -->
+	<script>
+		document.getElementById('viewImageBtn').addEventListener('click', function() {
+			document.getElementById('overlay').style.display = 'block';
+			document.getElementById('imagePopup').style.display = 'block';
+		});
+		document.getElementById('closeBtn').addEventListener('click', function() {
+			document.getElementById('overlay').style.display = 'none';
+			document.getElementById('imagePopup').style.display = 'none';
+		});
+		document.getElementById('overlay').addEventListener('click', function() {
+			this.style.display = 'none';
+			document.getElementById('imagePopup').style.display = 'none';
+		});
+	</script>
+	<!--//scripts-->
+
+</body>
+
+</html>
